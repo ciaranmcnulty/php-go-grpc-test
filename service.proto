@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/packyderm/packyderm";
+option php_namespace = "Packyderm\\Grpc";
+
+service ImageBuilder {
+  rpc FetchConfigFile(ConfigFileReq) returns (ConfigFileRes);
+  rpc BuildImage(BuildImageReq) returns (BuildImageRes);
+}
+
+message ConfigFileReq {}
+message ConfigFileRes {
+  string contents = 1;
+}
+
+message BuildImageReq {
+  string dockerfile = 1;
+}
+message BuildImageRes {}

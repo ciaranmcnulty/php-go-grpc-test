@@ -1,0 +1,19 @@
+{
+    "name": "packyderm/packyderm",
+    "require": {
+        "grpc/grpc": "^1.52"
+    },
+    "authors": [
+        {
+            "name": "Ciaran McNulty",
+            "email": "mail@ciaranmcnulty.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GPBMetadata\\" : "src-generated/GPBMetadata",
+            "Packyderm\\Grpc\\" : "src-generated/Packyderm/Grpc",
+            "Packyderm\\Frontend\\" : "src/"
+        }
+    }
+}
